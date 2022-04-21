@@ -1,0 +1,117 @@
+html {
+  font-size: 10px;
+  
+  /* Setting a base font size makes resizing elements easier with relative size properties later */
+  
+  background: grey;
+}
+
+.dropbtn {
+  display: flex;
+  flex-direction: column;
+  
+  /* Setting your flex direction to column stacks the three shapes for the big mac button vertically instead of lining them up horizontally */
+  
+  align-items: center;
+  justify-content: space-evenly;
+  height: 4.5em;
+  width: 4.5em;
+  
+  /* Height and width being set using em will resize the button according to the font-size which will change with window size using media queries later */
+  
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  
+  /* Setting the cursor to change when it interacts with the button is a good visual cue that the button is there and is a clickable element sinze the parent container for the big mac menu has been set to transparent */
+  
+  background: transparent;
+  border-style: none;
+  border-radius: .75em
+}
+
+/* Big Mac Button Styling Section */
+
+#button-top {
+  height: 3px;
+  width: 85%;
+  background: white;
+  border-radius: 10px;
+}
+
+#button-mid {
+  height: 3px;
+  width: 85%;
+  background: white;
+  border-radius: 10px;
+}
+
+#button-bot {
+  height: 3px;
+  width: 85%;
+  background: white;
+  border-radius: 10px;
+}
+
+/* Big Mac Button Styling Section */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  border-radius: .75em;
+  background-color: #FFFFFF80;
+  min-width: 145px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+  /* Setting z-index to 1 will keep the menu above any other elements when it is hovered over for display*/
+  
+}
+
+.dropdown_content ul {
+  list-style: none;
+  
+  /* Setting the list style to none will remove the default bullet points for the ul element */
+  
+  font-size: 2em;
+}
+
+.dropdown_content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0px 0px 0px;
+}
+
+.dropdown_content a:hover {
+  font-weight: bold;
+  
+/* Changes the font to bold on hover */
+  
+}
+
+.dropdown_content a:visited {
+  color: black;
+  
+/* Keeps the dropdown links from changing color after clicked */
+  
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+  
+/* Shows dropdown content on hover */
+  
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #00000060;
+  
+  /* Above code changes the background color of the button */
+  
+}
